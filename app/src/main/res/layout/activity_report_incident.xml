@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReportIncidentActivity">
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/buttonstyle"
+        android:text="submit"
+        android:textColor="#FBFFFFFF"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="@+id/button_uploadImage"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Description" />
+
+    <Button
+        android:id="@+id/button_uploadImage"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="52dp"
+        android:background="#FBECC35D"
+        android:text="upload image"
+
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_whatHappened" />
+
+    <EditText
+        android:id="@+id/editText_district"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/editbox"
+        android:ems="10"
+        android:layout_marginTop="50dp"
+        android:hint="Enter your district"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="57dp"
+        app:layout_constraintStart_toEndOf="@id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/editText_subDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/editbox"
+        android:ems="10"
+        android:hint="Enter your sub-division"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/editText_district" />
+
+    <EditText
+        android:id="@+id/editText_locationOfIncident"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:background="@drawable/editbox"
+        android:hint="Enter location of incident"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/textView7"
+        app:layout_constraintTop_toBottomOf="@id/textView_timeOfIncident" />
+
+    <EditText
+        android:id="@+id/editText_Description"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="230dp"
+        android:background="@drawable/editbox"
+        android:hint="Briefly describe what happened"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.964" />
+
+    <EditText
+        android:id="@+id/editText_nameOfOffender"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:background="@drawable/editbox"
+        android:hint="Enter name of Offender"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_locationOfIncident"
+        app:layout_constraintStart_toEndOf="@id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/editText_locationOfIncident" />
+
+    <EditText
+        android:id="@+id/editText_whatHappened"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:hint="Enter 1-2 words"
+        app:layout_constraintBaseline_toBaselineOf="@id/textView10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editText_nameOfOffender"
+        app:layout_constraintTop_toBottomOf="@+id/editText_nameOfOffender" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintBottom_toBottomOf="@id/button_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_uploadImage"
+        app:layout_constraintVertical_bias="0.519"
+        app:srcCompat="@drawable/ic_photo_black_24dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="District"
+        android:textColor="#FB081E39"
+        android:textSize="14dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/editText_district"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_district" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Sub-Division"
+        android:textColor="#FB081E39"
+        android:textSize="14dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/editText_subDivision"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_district" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="52dp"
+        android:text="What happened"
+        android:textColor="#FB081E39"
+        android:textSize="14dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_nameOfOffender" />
+
+    <TextView
+        android:id="@+id/textView_timeOfIncident"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="172dp"
+        android:text="Time of Incident"
+        app:layout_constraintBaseline_toBaselineOf="@id/textView_dateOfIncident"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_subDivision" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="location of incident"
+        android:textColor="#FB081E39"
+        android:textSize="14dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintEnd_toStartOf="@+id/editText_locationOfIncident"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_reportingTimeAndDate" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:textColor="#FB081E39"
+        android:textSize="14dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Name of Offender"
+        app:layout_constraintBaseline_toBaselineOf="@id/editText_nameOfOffender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_locationOfIncident" />
+
+    <TextView
+        android:id="@+id/textView_reportingTimeAndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:text="Get reporting Time and Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/textView_dateOfIncident"
+        app:layout_constraintTop_toBottomOf="@+id/textView_dateOfIncident" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:layout_marginStart="10dp"
+        android:text="Brief description"
+        android:textColor="#FB081E39"
+        android:textSize="14dp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editText_whatHappened"
+        app:layout_constraintTop_toTopOf="@+id/editText_Description" />
+
+    <TextView
+        android:id="@+id/textView_dateOfIncident"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Date of Incident"
+        android:textColor="#FB081E39"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_subDivision" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="F. I. R."
+        android:textSize="24dp"
+        android:textColor="#FBFB0A0A"
+        android:fontFamily="sans-serif-smallcaps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        app:itemBackground="@color/colorAccent"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_navigation" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/ic_add_circle_black_24dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

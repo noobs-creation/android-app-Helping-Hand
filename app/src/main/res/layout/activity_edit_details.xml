@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/images"
+    tools:context=".EditDetailsActivity">
+
+    <EditText
+        android:id="@+id/editText_EditDetails_Name"
+        android:layout_width="383dp"
+        android:background="@drawable/editbox"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:hint="  Enter your name  "
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_EditDetails_profilePic" />
+
+    <EditText
+        android:id="@+id/editText_EditDetails_Aadhar"
+        android:layout_width="383dp"
+        android:background="@drawable/editbox"
+        android:layout_height="30dp"
+        android:layout_marginTop="19dp"
+        android:ems="12"
+        android:hint="Enter your AADHAR number"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_EditDetails_Name" />
+
+    <TextView
+        android:id="@+id/textView_EditDetails_Age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="17dp"
+        android:hint="Your Age"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_EditDetails_BloodGroup"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton_date" />
+
+    <EditText
+        android:id="@+id/editText_EditDetails_BloodGroup"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:hint="Enter your blood group"
+        android:textAlignment="center"
+        android:background="@drawable/editbox"
+        app:layout_constraintBottom_toTopOf="@+id/button_EditDetails_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_EditDetails_submit"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="61dp"
+        android:text="submit"
+        android:textColor="#FBFFFFFF"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="@drawable/buttonstyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton_date" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="14dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_EditDetails_Aadhar"
+        app:srcCompat="@drawable/ic_date" />
+
+    <TextView
+        android:id="@+id/textView_EditDetails_Date"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="17dp"
+        android:text="Birthday"
+        android:textSize="16dp"
+        android:background="@drawable/editbox"
+        app:layout_constraintBottom_toTopOf="@+id/editText_EditDetails_BloodGroup"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_EditDetails_profilePic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="72dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_account_circle_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_EditDetails_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_chevron_left_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
